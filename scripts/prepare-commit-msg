@@ -1,0 +1,13 @@
+#!/bin/sh
+# Strip Cursor co-author trailers from commit messages
+# Ensures no "Co-authored-by: Cursor" appears in git history
+
+COMMIT_MSG_FILE="$1"
+
+if [ -n "$COMMIT_MSG_FILE" ] && [ -f "$COMMIT_MSG_FILE" ]; then
+  # Remove lines containing Co-authored-by with Cursor or cursoragent
+  grep -viE 'co-authored-by:.*(cursor|cursoragent)' "$COMMIT_MSG_FILE" > "${COMMIT_MSG_FILE}.tmp" 2>/dev/null && \
+  mv "${COMMIT_MSG_FILE}.tmp" "$COMMIT_MSG_FILE"
+fi
+
+exit 0

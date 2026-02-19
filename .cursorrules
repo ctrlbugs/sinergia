@@ -1,0 +1,6 @@
+# Project Rules
+
+## Git & Attribution
+- Do NOT add "Co-authored-by: Cursor" or any Cursor attribution to git commits.
+- All commits should reflect only the human author.
+- This project has a prepare-commit-msg hook that strips Cursor co-author trailers.

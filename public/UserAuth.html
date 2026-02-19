@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transforming Procurement Through Digital Excellence</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/skin_color.css">
+  <link rel="icon" href="/images/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      min-height: 100vh;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .preloader-logo {
+      width: 220px;
+      max-width: 80vw;
+      height: 220px;
+      margin: 0 auto 24px auto;
+      display: block;
+      object-fit: contain;
+      image-rendering: auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 16px 0 rgba(0,0,0,0.04);
+      transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+    }
+    .preloader-footer {
+      position: fixed;
+      left: 0; right: 0; bottom: 5vh;
+      width: 100vw;
+      text-align: center;
+      font-family: 'Pacifico', cursive, sans-serif;
+      font-size: 1.2rem;
+      color: #F71007;
+      letter-spacing: 1px;
+      user-select: none;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+    .loading-dots {
+      display: inline-block;
+      font-size: 1.2rem;
+      color: #F71007;
+      vertical-align: middle;
+      letter-spacing: 0.2em;
+      font-family: inherit;
+    }
+    .loading-dot {
+      opacity: 0.2;
+      animation: dotFade 1.2s infinite;
+    }
+    .loading-dot:nth-child(1) { animation-delay: 0s; }
+    .loading-dot:nth-child(2) { animation-delay: 0.2s; }
+    .loading-dot:nth-child(3) { animation-delay: 0.4s; }
+    .loading-dot:nth-child(4) { animation-delay: 0.6s; }
+    .loading-dot:nth-child(5) { animation-delay: 0.8s; }
+    .loading-dot:nth-child(6) { animation-delay: 1s; }
+    @keyframes dotFade {
+      0%, 100% { opacity: 0.2; }
+      40% { opacity: 1; }
+      60% { opacity: 0.6; }
+    }
+    .fade-out {
+      opacity: 0;
+      transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);
+      pointer-events: none;
+    }
+    .img-fallback {
+      color: #888;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body style="background: #fff; min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; margin: 0; opacity: 1; transition: opacity 0.7s cubic-bezier(0.4,0,0.2,1);">
+  <img src="images/preloaders/preload.png?v=3" alt="SINERGIA Loader" style="width: 100px; height: 100px; max-width: 50vw; margin-bottom: 18px; display: block; object-fit: contain; background: none; border-radius: 0; box-shadow: none;">
+  <div class="preloader-footer" style="font-family: 'Pacifico', cursive; font-size: 1.05em; color: #F71007; text-align: center;">
+    Transforming Procurement<span id="dots">...</span>
+  </div>
+  <script>
+    // Animated dots (only the dots animate, text remains static)
+    const dots = document.getElementById('dots');
+    let dotCount = 0;
+    setInterval(() => {
+      dotCount = (dotCount + 1) % 4;
+      dots.textContent = dotCount === 0 ? '' : '.'.repeat(dotCount);
+    }, 400);
+
+    // Detect current domain/hostname
+    const hostname = window.location.hostname;
+    const isLandingPage = hostname === 'tradepat.com' || hostname === 'www.tradepat.com' || (hostname === 'localhost' && window.location.port === '3002');
+
+    // Simple splash screen - show for 2 seconds then redirect
+    // No auth checking, just a visual preloader
+    setTimeout(() => {
+      document.body.style.opacity = 0;
+      setTimeout(() => {
+        if (isLandingPage) {
+          // Landing page: redirect to home with flag to prevent loop
+          window.location.href = '/?fromUserAuth=true';
+        } else {
+          // User dashboard: check auth and redirect accordingly
+          const token = document.cookie.split('; ').find(row => row.startsWith('token='));
+          if (token) {
+            window.location.href = '/dashboard';
+          } else {
+            window.location.href = '/auth_login';
+          }
+        }
+      }, 700);
+    }, 2000);
+  </script>
+
+
+</body>
+</html>
+
