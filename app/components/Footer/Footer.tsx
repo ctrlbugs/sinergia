@@ -2,23 +2,23 @@
 
 import Image from 'next/image';
 import { handleSignUp } from '@/app/config/constants';
+import { useContactModal } from '@/app/components/ContactModal/ContactModal';
 
 const LOGO_VERSION = 3;
 
-const scrollToSection = (sectionId: string) => {
-  const element = document.getElementById(sectionId);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }
-};
-
-const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string, href: string) => {
-  e.preventDefault();
-  scrollToSection(sectionId);
-  window.history.pushState(null, '', href);
-};
-
 export default function Footer() {
+  const { openModal: openContactModal } = useContactModal();
+
+  const handleSectionClick = (e: React.MouseEvent<HTMLAnchorElement>, sectionId: string, href: string) => {
+    e.preventDefault();
+    if (sectionId === 'contact') {
+      openContactModal();
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    window.history.pushState(null, '', href);
+  };
   return (
     <footer className="footer">
       <div className="footer-content">

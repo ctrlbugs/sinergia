@@ -5,18 +5,23 @@ import Link from 'next/link';
 import { useState } from 'react';
 import LanguageSelector from '../LanguageSelector/LanguageSelector';
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import { useContactModal } from '@/app/components/ContactModal/ContactModal';
 
 // Bump this version when you change logo.png to bypass cache
 const LOGO_VERSION = 3;
 
 export default function Navbar() {
   const { t } = useLanguage();
+  const { openModal: openContactModal } = useContactModal();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string, sectionId: string) => {
     e.preventDefault();
-    scrollToSection(sectionId);
-    // Update URL without reload using pushState
+    if (sectionId === 'contact') {
+      openContactModal();
+    } else {
+      scrollToSection(sectionId);
+    }
     window.history.pushState(null, '', href);
     setMobileMenuOpen(false);
   };

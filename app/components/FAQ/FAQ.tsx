@@ -9,54 +9,54 @@ interface FAQItem {
 
 const faqs: FAQItem[] = [
   {
-    question: 'What is the purpose of the e-Procurement Portal?',
+    question: 'What role does Sinergia Negotium play in the procurement process?',
     answer:
-      'The e-Procurement Portal is designed to digitize and streamline procurement processes, ensuring transparency, efficiency, compliance, and improved oversight across all procurement activities.',
+      'We serve as an independent procurement advisory and oversight partner, managing tender processes, bid evaluations, and compliance monitoring on behalf of oil & gas operators, government institutions, and private enterprises.',
   },
   {
-    question: 'Who can use the portal?',
+    question: 'Do you only provide a portal, or full procurement management?',
     answer:
-      'The platform is designed for procurement administrators, internal departments, vendors, contractors, evaluators, and authorized oversight bodies involved in procurement processes.',
+      'We provide full procurement lifecycle management — from planning and tender structuring to bid evaluation, award recommendations, and ongoing oversight.',
   },
   {
-    question: 'What procurement activities are covered on the platform?',
+    question: 'Which sectors do you serve?',
     answer:
-      'The portal supports end-to-end procurement activities including tender publication, vendor registration, bid submission, bid evaluation, contract award, and performance monitoring.',
+      'We primarily serve oil & gas companies, government agencies, and private sector organizations requiring structured, compliant, and transparent procurement systems.',
   },
   {
-    question: 'How does the portal improve transparency?',
+    question: 'How do you ensure transparency and fairness?',
     answer:
-      'All procurement activities are logged with secure audit trails, timestamped actions, and role-based access controls to ensure accountability and traceability.',
+      'All procurement activities are managed under structured governance frameworks, documented evaluation criteria, and independent oversight protocols to ensure fairness and audit readiness.',
   },
   {
-    question: 'Is vendor registration mandatory?',
+    question: 'Do you conduct independent bid evaluations?',
     answer:
-      'Yes. Vendors must complete a structured registration and verification process before participating in bids or tenders to ensure compliance and eligibility.',
+      'Yes. We manage and coordinate objective bid evaluation processes aligned with regulatory standards and industry best practices.',
   },
   {
-    question: 'How secure is the platform?',
+    question: 'How do you ensure regulatory compliance?',
     answer:
-      'The portal is built with secure system architecture, encrypted data transmission, controlled access levels, and continuous monitoring to protect sensitive procurement data.',
+      'Our procurement frameworks are designed to align with industry regulations, public sector procurement standards, and corporate governance policies.',
   },
   {
-    question: 'Can bids be submitted online?',
+    question: 'Can vendors participate through your system?',
     answer:
-      'Yes. Vendors can securely submit bids electronically within the specified deadline, eliminating manual paperwork and reducing administrative delays.',
+      'Yes. Approved vendors can register, access tenders, and submit bids electronically within a structured and monitored procurement environment.',
   },
   {
-    question: 'Does the portal support compliance and audit requirements?',
+    question: 'Is your platform secure?',
     answer:
-      'Absolutely. The system maintains comprehensive digital records to support compliance reviews, internal audits, and regulatory oversight.',
+      'Yes. The system operates with controlled access, encrypted data handling, and audit trails to protect sensitive procurement information.',
   },
   {
-    question: 'What are the benefits of digitizing procurement?',
+    question: 'Do you support audit and reporting requirements?',
     answer:
-      'Digitization reduces processing time, minimizes manual errors, enhances transparency, improves vendor participation, and strengthens governance.',
+      'Absolutely. We maintain comprehensive documentation and generate audit-ready reports to support internal reviews and regulatory oversight.',
   },
   {
-    question: 'Is training or support available for users?',
+    question: 'How can an organization engage your services?',
     answer:
-      'Yes. User guidance materials and technical support are provided to ensure smooth onboarding and effective utilization of the platform.',
+      'Organizations can initiate engagement through a formal consultation, after which we structure a procurement oversight framework tailored to their operational and regulatory needs.',
   },
 ];
 

@@ -4,23 +4,23 @@ const steps = [
   {
     number: 1,
     icon: 'person_add',
-    title: 'Register',
+    title: 'Plan',
     description:
-      'Create your account and complete verification.',
+      'We assess your objectives, compliance requirements, and project scope to design a structured procurement strategy.',
   },
   {
     number: 2,
     icon: 'search',
-    title: 'Explore',
+    title: 'Oversee',
     description:
-      'Access tenders and review bidding documents.',
+      'We manage tender publication, vendor coordination, and independent bid evaluation with full transparency.',
   },
   {
     number: 3,
     icon: 'send',
-    title: 'Submit',
+    title: 'Deliver',
     description:
-      'Send your bid online and track its progress in real time.',
+      'We provide award recommendations, compliance documentation, and ongoing procurement oversight.',
   },
 ];
 
@@ -32,7 +32,7 @@ export default function HowItWorks() {
           <div className="section-badge">GET STARTED</div>
           <h2 className="section-title">Your Gateway to Smarter Procurement</h2>
           <p className="section-subtitle">
-            Register, explore tenders, and participate with confidence through a trusted digital system.
+          Register your organization, access structured procurement opportunities, and engage with confidence through a secure and compliant system.
           </p>
         </div>
         <div className="steps-grid">

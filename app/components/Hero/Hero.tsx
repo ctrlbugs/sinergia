@@ -27,19 +27,21 @@ export default function Hero() {
     t('hero.title1'),
     t('hero.title2'),
     t('hero.title3'),
+    t('hero.title4'),
   ]);
 
   const [heroSubtitles, setHeroSubtitles] = useState([
     t('hero.subtitle1'),
     t('hero.subtitle2'),
     t('hero.subtitle3'),
+    t('hero.subtitle4'),
   ]);
 
   // Update titles, subtitles, and badges when language changes
   useEffect(() => {
     setHeroBadges([t('hero.badge.crypto'), t('hero.badge.stock')]);
-    setHeroTitles([t('hero.title1'), t('hero.title2'), t('hero.title3')]);
-    setHeroSubtitles([t('hero.subtitle1'), t('hero.subtitle2'), t('hero.subtitle3')]);
+    setHeroTitles([t('hero.title1'), t('hero.title2'), t('hero.title3'), t('hero.title4')]);
+    setHeroSubtitles([t('hero.subtitle1'), t('hero.subtitle2'), t('hero.subtitle3'), t('hero.subtitle4')]);
   }, [language, t]);
 
   // Rotate badge every 30 seconds

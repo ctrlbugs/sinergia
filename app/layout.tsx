@@ -3,6 +3,7 @@ import "./globals.css";
 import FadeInObserver from "./components/FadeInObserver";
 import { LanguageProvider } from "./contexts/LanguageContext";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
+import { ContactModalProvider } from "./components/ContactModal/ContactModal";
 
 export const metadata: Metadata = {
   title: "Transforming Procurement Through Digital Excellence",
@@ -89,9 +90,11 @@ export default function RootLayout({
       </head>
       <body>
         <LanguageProvider>
-          <FadeInObserver />
-          {children}
-          <ScrollToTop />
+          <ContactModalProvider>
+            <FadeInObserver />
+            {children}
+            <ScrollToTop />
+          </ContactModalProvider>
         </LanguageProvider>
       </body>
     </html>

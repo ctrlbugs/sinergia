@@ -21,13 +21,13 @@ export default function About() {
               Sinergia Negotium Limited is driving procurement transformation through the design and implementation of a modern e-procurement portal. This initiative is focused on digitizing procurement processes, improving transparency, strengthening compliance, and enhancing operational efficiency.
             </p>
             <p className="about-description">
-              By integrating <strong>structured workflows</strong>, <strong>intelligent system architecture</strong>, and <strong>strategic advisory support</strong>, the platform is built to streamline tender management, vendor participation, bid evaluation, and procurement oversight — all within a secure and scalable digital framework.
+              By integrating <strong>structured workflows</strong>, <strong>intelligent system architecture</strong>, and <strong>strategic advisory support</strong>, built to streamline procurement management,  bid evaluation, and procurement oversight — all within a secure and scalable digital framework.
             </p>
           </div>
           
           <div className="about-content-right">
             <div className="about-highlight-box">
-              <p>Our approach ensures improved governance, reduced administrative bottlenecks, and greater accountability across procurement operations.</p>
+              <p>Our approach strengthens governance frameworks, streamline complex procurement processes, and deliver transparent, compliant solutions for oil & gas, government, and private sector organizations.</p>
             </div>
             
             <div className="about-features-grid">
@@ -63,7 +63,7 @@ export default function About() {
                   <span className="material-icons">gavel</span>
                 </div>
                 <div className="about-feature-text">
-                  <span>Electronic Tendering</span>
+                  <span>Bid Evaluation</span>
                 </div>
               </div>
             </div>
