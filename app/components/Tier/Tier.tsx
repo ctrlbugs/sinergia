@@ -5,7 +5,7 @@ const tiers = [
     name: 'Foundation Tier',
     profitMargin: 'Normal',
     icon: 'foundation',
-    description: 'Perfect for beginners looking to start their investment journey with TradePAT. Get access to essential features and normal profit margins.',
+    description: 'Perfect for beginners looking to start their investment journey with Sinergia Negotium. Get access to essential features and normal profit margins.',
   },
   {
     name: 'Ascend Tier',
@@ -31,7 +31,7 @@ export default function Tier() {
           <div className="section-badge">Investment Tiers</div>
           <h2 className="section-title">Choose Your Investment Tier</h2>
           <p className="section-subtitle">
-            Select the tier that best fits your investment goals and start earning with TradePAT.
+            Select the tier that best fits your investment goals and start earning with Sinergia Negotium.
           </p>
         </div>
         <div className="tier-grid">

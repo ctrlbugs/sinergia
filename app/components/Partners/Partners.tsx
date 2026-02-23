@@ -3,15 +3,17 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 
-// Assets from images/Partners - grayscale carousel with duplicate for seamless loop
+// Logos from images/Partners
 const partnerLogos = [
-  { src: '/images/Partners/android.svg', alt: 'Android' },
-  { src: '/images/Partners/envato.svg', alt: 'Envato' },
-  { src: '/images/Partners/google.svg', alt: 'Google' },
-  { src: '/images/Partners/linkedin.svg', alt: 'LinkedIn' },
-  { src: '/images/Partners/microsoft.svg', alt: 'Microsoft' },
-  { src: '/images/Partners/netflix.svg', alt: 'Netflix' },
-  { src: '/images/Partners/coca-cola.svg', alt: 'Coca-Cola' },
+  { src: '/images/Partners/Aradel.png', alt: 'Aradel' },
+  { src: '/images/Partners/Chevron.png', alt: 'Chevron' },
+  { src: '/images/Partners/exxon.png', alt: 'Exxon' },
+  { src: '/images/Partners/Heir.png', alt: 'Heir' },
+  { src: '/images/Partners/Mrs.png', alt: 'Mrs' },
+  { src: '/images/Partners/oando.png', alt: 'Oando' },
+  { src: '/images/Partners/Oiltest.png', alt: 'Oiltest' },
+  { src: '/images/Partners/Petrolex.png', alt: 'Petrolex' },
+  { src: '/images/Partners/seplat.png', alt: 'Seplat' },
 ];
 
 export default function Partners() {
@@ -148,9 +150,6 @@ export default function Partners() {
   return (
     <section className="partners-section fade-in">
       <div className="partners-container">
-        <div className="partners-header">
-          <h3 className="partners-title">Trusted by Industry Leaders</h3>
-        </div>
         <div className="partners-carousel-container">
           <div className="partners-carousel">
             <div

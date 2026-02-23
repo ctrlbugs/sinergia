@@ -152,4 +152,4 @@ This is a proprietary project. For changes, contact the development team.
 
 ## 📄 License
 
-Copyright © TradePAT. All rights reserved.
+Copyright © Sinergia Negotium. All rights reserved.

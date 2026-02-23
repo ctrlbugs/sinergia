@@ -33,7 +33,7 @@ POST http://localhost:3002/api/test-email-send
 Content-Type: application/json
 
 {
-  "to": "signup@tradepat.com"
+  "to": "signup@sinergianegotium.com"
 }
 ```
 
@@ -41,7 +41,7 @@ Content-Type: application/json
 ```bash
 curl -X POST http://localhost:3002/api/test-email-send \
   -H "Content-Type: application/json" \
-  -d '{"to":"signup@tradepat.com"}'
+  -d '{"to":"signup@sinergianegotium.com"}'
 ```
 
 ### Step 3: Check .env.local File
@@ -54,9 +54,9 @@ Verify the file exists and has correct values:
 SMTP_HOST=server319.web-hosting.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=signup@tradepat.com
+SMTP_USER=signup@sinergianegotium.com
 SMTP_PASSWORD=Newrussia001
-SMTP_FROM=signup@tradepat.com
+SMTP_FROM=signup@sinergianegotium.com
 ```
 
 **Important Checks:**
@@ -64,7 +64,7 @@ SMTP_FROM=signup@tradepat.com
 - [ ] No extra spaces
 - [ ] No quotes around values
 - [ ] Password is correct: `Newrussia001`
-- [ ] Username matches: `signup@tradepat.com`
+- [ ] Username matches: `signup@sinergianegotium.com`
 
 ### Step 4: Verify Environment Variables Are Loaded
 
@@ -84,7 +84,7 @@ console.log('🔍 Environment Check:', {
 After sending, check:
 1. **Console logs** - Look for error messages
 2. **Response from API** - Check if `messageId` is present
-3. **Email inbox** - Check `signup@tradepat.com`
+3. **Email inbox** - Check `signup@sinergianegotium.com`
 4. **Spam folder** - Emails might go to spam initially
 
 ---

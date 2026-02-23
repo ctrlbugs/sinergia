@@ -1,7 +1,7 @@
 @echo off
 echo.
 echo ========================================
-echo 🚀 TradePAT Next.js Landing Page
+echo 🚀 Sinergia Negotium Next.js Landing Page
 echo ========================================
 echo.
 

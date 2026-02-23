@@ -170,9 +170,9 @@ Enhanced with high priority and retry logic.
 SMTP_HOST=mail.privateemail.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=signup@tradepat.com
+SMTP_USER=signup@sinergianegotium.com
 SMTP_PASSWORD=your-password
-SMTP_FROM=no-reply@tradepat.com
+SMTP_FROM=no-reply@sinergianegotium.com
 
 # Email Limits (optional - defaults shown)
 EMAIL_DAILY_LIMIT=500

@@ -43,7 +43,7 @@ Add these in **Vercel Dashboard** → **Project** → **Settings** → **Environ
 | `SMTP_PASSWORD` | Yes | SMTP password |
 | `SMTP_FROM` | Yes | From email address |
 | `NEXT_PUBLIC_BASE_URL` | No | Site URL for emails (e.g. `https://your-app.vercel.app`) |
-| `BACKEND_API_URL` | No | Backend API (defaults to `https://dashboard.tradepat.com`) |
+| `BACKEND_API_URL` | No | Backend API (defaults to `https://dashboard.sinergianegotium.com`) |
 
 **Important:** Never commit `.env.local` or real credentials. Add them only in the Vercel dashboard.
 

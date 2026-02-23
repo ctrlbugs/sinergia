@@ -1,4 +1,4 @@
-# 🎯 TradePAT Landing Page - Next.js
+# 🎯 Sinergia Negotium Landing Page - Next.js
 
 This is the **ONLY** landing page project. The old HTML version has been removed.
 

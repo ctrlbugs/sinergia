@@ -18,9 +18,9 @@ Many SMTP servers (including server319.web-hosting.com) will **reject emails** i
 SMTP_HOST=server319.web-hosting.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=signup@tradepat.com
+SMTP_USER=signup@sinergianegotium.com
 SMTP_PASSWORD=Newrussia001
-SMTP_FROM=signup@tradepat.com
+SMTP_FROM=signup@sinergianegotium.com
 ```
 
 **Important:** 
@@ -62,24 +62,24 @@ SMTP_FROM=signup@tradepat.com
    ```
 
 2. **Verify .env.local:**
-   - Check `SMTP_USER=signup@tradepat.com`
+   - Check `SMTP_USER=signup@sinergianegotium.com`
    - Check `SMTP_PASSWORD=Newrussia001`
-   - Check `SMTP_FROM=signup@tradepat.com`
+   - Check `SMTP_FROM=signup@sinergianegotium.com`
 
 3. **Test Signup Form:**
    - Go to landing page
    - Enter email in hero form
    - Click "Sign up"
    - Check console for email sending logs
-   - Check `signup@tradepat.com` inbox
+   - Check `signup@sinergianegotium.com` inbox
 
 4. **Check Console Logs:**
    Look for:
    ```
    📧 Sending email: {
-     from: 'signup@tradepat.com',
-     to: 'signup@tradepat.com',
-     authenticatedUser: 'signup@tradepat.com',
+     from: 'signup@sinergianegotium.com',
+     to: 'signup@sinergianegotium.com',
+     authenticatedUser: 'signup@sinergianegotium.com',
    }
    ✅ Email sent successfully: { messageId: '...' }
    ```
@@ -103,7 +103,7 @@ Look for these messages:
 
 2. **Authentication failure:**
    - Verify password: `Newrussia001`
-   - Check username: `signup@tradepat.com`
+   - Check username: `signup@sinergianegotium.com`
    - Ensure account is active in cPanel
 
 3. **Connection issues:**
@@ -121,7 +121,7 @@ Look for these messages:
 - [ ] `SMTP_FROM` matches `SMTP_USER`
 - [ ] Server restarted after changes
 - [ ] Console shows email sending logs
-- [ ] Check `signup@tradepat.com` inbox
+- [ ] Check `signup@sinergianegotium.com` inbox
 - [ ] Check spam folder
 
 ---

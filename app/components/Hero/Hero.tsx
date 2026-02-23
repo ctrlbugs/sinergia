@@ -15,6 +15,9 @@ export default function Hero() {
   const badgeRefs = useRef<(HTMLSpanElement | null)[]>([]);
   const flipIndexRef = useRef<number>(0);
 
+  const [heroImageIndex, setHeroImageIndex] = useState(0);
+  const heroImages = ['/images/Hero11.png', '/images/Hero22.png'];
+
   const [heroBadges, setHeroBadges] = useState([
     t('hero.badge.crypto'),
     t('hero.badge.stock'),
@@ -39,7 +42,7 @@ export default function Hero() {
     setHeroSubtitles([t('hero.subtitle1'), t('hero.subtitle2'), t('hero.subtitle3')]);
   }, [language, t]);
 
-  // Rotate badge every 8 seconds
+  // Rotate badge every 30 seconds
   useEffect(() => {
     badgeRefs.current[0]?.classList.add('active');
     const badgeInterval = setInterval(() => {
@@ -51,7 +54,7 @@ export default function Hero() {
         }, 0);
         return next;
       });
-    }, 8000);
+    }, 30000);
     return () => clearInterval(badgeInterval);
   }, [heroBadges.length]);
 
@@ -96,11 +99,22 @@ export default function Hero() {
     };
   }, [heroTitles.length]);
 
+  // Smooth image crossfade - switch every 10 seconds
+  useEffect(() => {
+    const imageInterval = setInterval(() => {
+      setHeroImageIndex((prev) => (prev + 1) % heroImages.length);
+    }, 10000);
+    return () => clearInterval(imageInterval);
+  }, [heroImages.length]);
+
   return (
     <section ref={heroSectionRef} className="hero" id="hero">
       <div className="hero-container">
         <div className="hero-content fade-in">
-          <div className="section-badge hero-badge-rotating" style={{ display: 'inline-block', marginBottom: '1rem' }}>
+          <div className="section-badge hero-badge-rotating">
+            <span className="hero-badge-sizer" aria-hidden="true">
+              {heroBadges.reduce((a, b) => (a.length >= b.length ? a : b))}
+            </span>
             {heroBadges.map((badge, index) => (
               <span
                 key={index}
@@ -158,17 +172,20 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-visual fade-in">
-          <div className="hero-image-container">
-            <Image
-              src="/images/Heroimage.png"
-              alt="SINERGIA NEGOTIUM"
-              width={500}
-              height={500}
-              quality={100}
-              unoptimized
-              className="hero-image"
-              priority
-            />
+          <div className="hero-image-container hero-image-stack">
+            {heroImages.map((src, index) => (
+              <Image
+                key={src}
+                src={src}
+                alt="SINERGIA NEGOTIUM"
+                width={500}
+                height={500}
+                quality={100}
+                unoptimized
+                className={`hero-image hero-image-slide ${index === heroImageIndex ? 'active' : ''}`}
+                priority={index === 0}
+              />
+            ))}
           </div>
         </div>
       </div>

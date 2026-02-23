@@ -10,7 +10,7 @@ When you test the signup form, **watch your Next.js server console** for these m
 ```
 🔧 Initializing SMTP transporter: { host: 'server319.web-hosting.com', ... }
 ✅ SMTP transporter created successfully
-📧 Sending email: { from: 'signup@tradepat.com', ... }
+📧 Sending email: { from: 'signup@sinergianegotium.com', ... }
 📤 Attempting to send email via SMTP...
 ✅ Email sent successfully! { messageId: '...', response: '250 OK', ... }
 ```
@@ -30,7 +30,7 @@ Open browser console and run:
 fetch('/api/test-email-send', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ to: 'signup@tradepat.com' })
+  body: JSON.stringify({ to: 'signup@sinergianegotium.com' })
 })
 .then(r => r.json())
 .then(console.log)
@@ -56,9 +56,9 @@ fetch('/api/test-email-send', {
 SMTP_HOST=server319.web-hosting.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=signup@tradepat.com
+SMTP_USER=signup@sinergianegotium.com
 SMTP_PASSWORD=Newrussia001
-SMTP_FROM=signup@tradepat.com
+SMTP_FROM=signup@sinergianegotium.com
 ```
 
 **Check:**
@@ -115,7 +115,7 @@ If emails still don't work, share:
 
 **Solution:**
 1. Verify password: `Newrussia001`
-2. Verify username: `signup@tradepat.com`
+2. Verify username: `signup@sinergianegotium.com`
 3. Check account is active in cPanel
 4. Try logging into webmail to verify credentials
 
@@ -123,7 +123,7 @@ If emails still don't work, share:
 
 ## 📧 Check These Places
 
-1. **signup@tradepat.com inbox** (primary)
+1. **signup@sinergianegotium.com inbox** (primary)
 2. **Spam/Junk folder** (common)
 3. **Server console logs** (for errors)
 4. **Browser Network tab** (for API response)

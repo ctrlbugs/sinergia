@@ -19,7 +19,7 @@ export default function CTA() {
     setIsSubmitting(true);
 
     try {
-      // Send email to signup@tradepat.com
+      // Send email to signup@sinergianegotium.com
       const mailtoLink = `mailto:signup@sinergianegotium.com?subject=Newsletter Subscription&body=Email: ${encodeURIComponent(email)}`;
       
       // Try to send via API first (if exists), otherwise use mailto

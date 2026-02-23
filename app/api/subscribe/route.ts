@@ -15,20 +15,20 @@ export async function POST(request: Request) {
     }
 
     // Determine email template and recipient based on type
-    const recipientEmail = 'signup@tradepat.com';
+    const recipientEmail = 'signup@sinergianegotium.com';
     let emailSubject = '';
     let emailHtml = '';
     
     // IMPORTANT: "from" must match SMTP_USER in .env.local
     // The email service will use the authenticated SMTP user as "from"
     // So ensure SMTP_USER in .env.local matches the account you want to send from
-    const fromEmail = process.env.SMTP_USER || 'signup@tradepat.com';
+    const fromEmail = process.env.SMTP_USER || 'signup@sinergianegotium.com';
 
     if (type === 'signup') {
-      emailSubject = 'New Signup Request - TradePAT Landing Page';
+      emailSubject = 'New Signup Request - Sinergia Negotium Landing Page';
       emailHtml = getSignupEmailTemplate(email);
     } else if (type === 'newsletter') {
-      emailSubject = 'Newsletter Subscription - TradePAT Landing Page';
+      emailSubject = 'Newsletter Subscription - Sinergia Negotium Landing Page';
       emailHtml = getNewsletterEmailTemplate(email);
     } else {
       return NextResponse.json(

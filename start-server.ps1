@@ -1,7 +1,7 @@
 # PowerShell script to start the Next.js development server
 Write-Host ""
 Write-Host "========================================" -ForegroundColor Cyan
-Write-Host "🚀 TradePAT Next.js Landing Page" -ForegroundColor Green
+Write-Host "🚀 Sinergia Negotium Next.js Landing Page" -ForegroundColor Green
 Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 

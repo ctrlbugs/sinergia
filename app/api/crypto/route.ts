@@ -63,7 +63,7 @@ export async function GET(request: Request) {
     
     const backendApiUrl = process.env.BACKEND_API_URL ||
                          (process.env.NODE_ENV === 'production'
-                           ? 'https://dashboard.tradepat.com'
+                           ? 'https://dashboard.sinergianegotium.com'
                            : 'http://localhost:5000');
 
     if (type === 'crypto') {

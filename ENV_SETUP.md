@@ -18,9 +18,9 @@ Create a new file named `.env.local` in the `landing-page-nextjs` directory.
 SMTP_HOST=server319.web-hosting.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=signup@tradepat.com
+SMTP_USER=signup@sinergianegotium.com
 SMTP_PASSWORD=Newrussia001
-SMTP_FROM=signup@tradepat.com
+SMTP_FROM=signup@sinergianegotium.com
 
 # Email Limits
 EMAIL_DAILY_LIMIT=500

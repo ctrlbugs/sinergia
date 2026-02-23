@@ -14,7 +14,7 @@ export default function TwoColumn() {
             {/* Using img tag instead of Next.js Image for cache-busting with query params */}
             <img
               src="/images/image 38.png?v=2"
-              alt="TradePAT Cryptocurrencies"
+              alt="Sinergia Negotium Cryptocurrencies"
               className="two-column-image-content"
               width={500}
               height={500}

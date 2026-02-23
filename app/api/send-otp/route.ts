@@ -21,12 +21,12 @@ export async function POST(request: Request) {
       );
     }
 
-    // Send OTP email from no-reply@tradepat.com with high priority
+    // Send OTP email from no-reply@sinergianegotium.com with high priority
     const emailResult = await sendEmailAdvanced({
       to: email,
-      subject: 'Your TradePAT Verification Code',
+      subject: 'Your Sinergia Negotium Verification Code',
       html: getOTPEmailTemplate(email, otpCode),
-      from: 'no-reply@tradepat.com', // Use no-reply account for OTP
+      from: 'no-reply@sinergianegotium.com', // Use no-reply account for OTP
       priority: 'high', // High priority for OTP codes
       tags: ['otp', 'verification', 'security'],
     });

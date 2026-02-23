@@ -15,11 +15,11 @@ export const metadata: Metadata = {
     shortcut: '/images/favicon.png',
   },
   openGraph: {
-    title: "TradePAT - AI-Powered Trading Platform",
-    description: "Protection. Access. Trust. Trade securely with AI-powered intelligence.",
+    title: "Transforming Procurement Through Digital Excellence",
+    description: "Sinergia Negotium Limited is driving procurement transformation through the design and implementation of a modern e-procurement portal",
     type: "website",
     url: "https://sinergianegotium.com",
-    siteName: "TradePAT",
+    siteName: "Sinergia Negotium",
     images: [
       {
         url: '/images/logo.png',
@@ -31,8 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "TradePAT - AI-Powered Trading Platform",
-    description: "Protection. Access. Trust. Trade securely with AI-powered intelligence.",
+    title: "Transforming Procurement Through Digital Excellence",
+    description: "Sinergia Negotium Limited is driving procurement transformation through the design and implementation of a modern e-procurement portal",
     images: ['/images/securepat-icon.png'],
   },
   metadataBase: new URL('https://sinergianegotium.com'),
@@ -71,17 +71,17 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "TradePAT",
-              "url": "https://www.tradepat.com",
-              "logo": "https://www.tradepat.com/images/securepat-icon.png",
-              "description": "TradePAT is an AI-powered investment management platform that combines advanced analytics, real-time market intelligence, and automated decision support to help investors grow, manage, and protect their wealth.",
+              "name": "Sinergia Negotium",
+              "url": "https://www.sinergianegotium.com",
+              "logo": "https://www.sinergianegotium.com/images/securepat-icon.png",
+              "description": "Sinergia Negotium is an AI-powered investment management platform that combines advanced analytics, real-time market intelligence, and automated decision support to help investors grow, manage, and protect their wealth.",
               "sameAs": [
-                "https://www.tradepat.com"
+                "https://www.sinergianegotium.com"
               ],
               "contactPoint": {
                 "@type": "ContactPoint",
                 "contactType": "Customer Service",
-                "url": "https://www.tradepat.com"
+                "url": "https://www.sinergianegotium.com"
               }
             }),
           }}

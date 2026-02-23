@@ -4,7 +4,7 @@ import { sendEmailAdvanced } from '@/app/lib/emailService';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { to, testEmail = 'signup@tradepat.com' } = body;
+    const { to, testEmail = 'signup@sinergianegotium.com' } = body;
 
     const recipientEmail = to || testEmail;
 
@@ -16,16 +16,16 @@ export async function POST(request: Request) {
     // Send a simple test email
     const emailResult = await sendEmailAdvanced({
       to: recipientEmail,
-      subject: 'Test Email from TradePAT',
+      subject: 'Test Email from Sinergia Negotium',
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px;">
           <h1>Test Email</h1>
-          <p>This is a test email from TradePAT email service.</p>
+          <p>This is a test email from Sinergia Negotium email service.</p>
           <p>If you receive this, the email system is working correctly.</p>
           <p>Sent at: ${new Date().toLocaleString()}</p>
         </div>
       `,
-      from: process.env.SMTP_USER || 'signup@tradepat.com',
+      from: process.env.SMTP_USER || 'signup@sinergianegotium.com',
       priority: 'normal',
     });
 
@@ -45,7 +45,7 @@ export async function POST(request: Request) {
       error: emailResult.error,
       details: {
         to: recipientEmail,
-        from: process.env.SMTP_USER || 'signup@tradepat.com',
+        from: process.env.SMTP_USER || 'signup@sinergianegotium.com',
         timestamp: new Date().toISOString(),
       },
     }, { status: emailResult.success ? 200 : 500 });

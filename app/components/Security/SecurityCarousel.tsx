@@ -22,14 +22,14 @@ const securityFeatures: SecurityFeature[] = [
     icon: 'verified',
     title: 'Multi-Layer Auth',
     description:
-      'TradePAT verifies every login and critical action using multiple authentication layers, significantly reducing the risk of account compromise even if one factor is exposed.',
+      'Sinergia Negotium verifies every login and critical action using multiple authentication layers, significantly reducing the risk of account compromise even if one factor is exposed.',
     color: '#3b82f6',
   },
   {
     icon: 'add_moderator',
     title: 'Secure By Design',
     description:
-      'From encryption to access control, every layer of TradePAT is engineered to protect your capital and privacy.',
+      'From encryption to access control, every layer of Sinergia Negotium is engineered to protect your capital and privacy.',
     color: '#f59e0b',
   },
   {
@@ -145,7 +145,7 @@ export default function SecurityCarousel() {
   });
 
   return (
-    <section className="section" id="why-tradepat">
+    <section className="section" id="why-sinergia-negotium">
       <div className="section-container">
         <div className="section-header fade-in" style={{ textAlign: 'center' }}>
           <div className="section-badge">ENTERPRISE SECURITY</div>

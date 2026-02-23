@@ -58,12 +58,12 @@ To use Namecheap SMTP, I need:
 
 1. **SMTP Host**: Usually `mail.privateemail.com`
 2. **SMTP Port**: `465` (SSL) or `587` (TLS)
-3. **SMTP Username**: Your full email address (e.g., `signup@tradepat.com`)
+3. **SMTP Username**: Your full email address (e.g., `signup@sinergianegotium.com`)
 4. **SMTP Password**: Your email account password
-5. **From Email**: Can be `no-reply@tradepat.com` or your main email
+5. **From Email**: Can be `no-reply@sinergianegotium.com` or your main email
 
 **How to get these:**
-- Log into Namecheap → Domain List → Select `tradepat.com`
+- Log into Namecheap → Domain List → Select `sinergianegotium.com`
 - Click "Manage" next to "Private Email"
 - Go to "Mail Client Settings" or "SMTP Settings"
 - Copy the SMTP details
@@ -73,7 +73,7 @@ To use Namecheap SMTP, I need:
 If you prefer Brevo, I need:
 
 1. **Brevo API Key**: Get from https://www.brevo.com/
-2. **Sender Email**: Verified email address (e.g., `no-reply@tradepat.com`)
+2. **Sender Email**: Verified email address (e.g., `no-reply@sinergianegotium.com`)
 3. **Sender Name**: Display name (e.g., "SecurePAT")
 
 **How to get Brevo API Key:**

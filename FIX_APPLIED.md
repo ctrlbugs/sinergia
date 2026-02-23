@@ -35,9 +35,9 @@
 SMTP_HOST=server319.web-hosting.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=signup@tradepat.com
+SMTP_USER=signup@sinergianegotium.com
 SMTP_PASSWORD=Newrussia001
-SMTP_FROM=signup@tradepat.com
+SMTP_FROM=signup@sinergianegotium.com
 ```
 
 ### 2. Enhanced Logging
@@ -65,7 +65,7 @@ After restarting, test with:
 fetch('/api/test-email-send', {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({ to: 'signup@tradepat.com' })
+  body: JSON.stringify({ to: 'signup@sinergianegotium.com' })
 })
 .then(r => r.json())
 .then(console.log)
@@ -86,7 +86,7 @@ fetch('/api/test-email-send', {
 ## 📧 Check Your Inbox
 
 After testing:
-1. Check `signup@tradepat.com` inbox
+1. Check `signup@sinergianegotium.com` inbox
 2. Check spam/junk folder
 3. Wait 1-2 minutes (delivery can be delayed)
 

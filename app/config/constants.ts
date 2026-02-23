@@ -3,19 +3,19 @@ export const LandingPageConfig = {
   // Authentication URLs - Dynamic based on environment
   get authSignUpUrl() {
     if (typeof window !== 'undefined') {
-      // Check if we're in production (dashboard.tradepat.com) or localhost
-      const isProduction = window.location.hostname === 'dashboard.tradepat.com' || 
-                          window.location.hostname === 'tradepat.com' ||
-                          window.location.hostname.includes('tradepat.com');
+      // Check if we're in production (dashboard.sinergianegotium.com) or localhost
+      const isProduction = window.location.hostname === 'dashboard.sinergianegotium.com' || 
+                          window.location.hostname === 'sinergianegotium.com' ||
+                          window.location.hostname.includes('sinergianegotium.com');
       
       if (isProduction) {
-        return 'https://dashboard.tradepat.com';
+        return 'https://dashboard.sinergianegotium.com';
       }
       return 'http://localhost:3000';
     }
     // Server-side: check NODE_ENV
     return process.env.NODE_ENV === 'production' 
-      ? 'https://dashboard.tradepat.com'
+      ? 'https://dashboard.sinergianegotium.com'
       : 'http://localhost:3000';
   },
   
@@ -25,17 +25,17 @@ export const LandingPageConfig = {
   
   get dashboardUrl() {
     if (typeof window !== 'undefined') {
-      const isProduction = window.location.hostname === 'dashboard.tradepat.com' || 
-                          window.location.hostname === 'tradepat.com' ||
-                          window.location.hostname.includes('tradepat.com');
+      const isProduction = window.location.hostname === 'dashboard.sinergianegotium.com' || 
+                          window.location.hostname === 'sinergianegotium.com' ||
+                          window.location.hostname.includes('sinergianegotium.com');
       
       if (isProduction) {
-        return 'https://dashboard.tradepat.com';
+        return 'https://dashboard.sinergianegotium.com';
       }
       return 'http://localhost:3000';
     }
     return process.env.NODE_ENV === 'production' 
-      ? 'https://dashboard.tradepat.com'
+      ? 'https://dashboard.sinergianegotium.com'
       : 'http://localhost:3000';
   },
   

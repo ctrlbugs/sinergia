@@ -54,7 +54,7 @@ export default function Footer() {
               <a href="/contact" onClick={(e) => handleSectionClick(e, 'contact', '/contact')}>Contact</a>
             </li>
             <li>
-              <a href="#" onClick={(e) => { e.preventDefault(); handleSignUp(); }}>Get Started</a>
+              <a href="/" onClick={(e) => handleSectionClick(e, 'hero', '/')}>Get Started</a>
             </li>
           </ul>
         </div>

@@ -38,13 +38,13 @@ const features: Feature[] = [
     icon: 'psychology',
     title: 'AI-Powered Intelligence',
     description:
-      "TradePAT's proprietary AI continuously scans market data, historical patterns, and trends to generate high-confidence insights — not guesswork.",
+      "Sinergia Negotium's proprietary AI continuously scans market data, historical patterns, and trends to generate high-confidence insights — not guesswork.",
   },
   {
     icon: 'auto_awesome',
     title: 'Automated Execution',
     description:
-      'From alerts to portfolio adjustments, TradePAT reduces human error while improving speed and efficiency.',
+      'From alerts to portfolio adjustments, Sinergia Negotium reduces human error while improving speed and efficiency.',
   },
   {
     icon: 'stars',
@@ -62,7 +62,7 @@ const features: Feature[] = [
     icon: 'public',
     title: 'Scalable & Global Reach',
     description:
-      'TradePAT supports local and international markets, scaling effortlessly with user growth and portfolio size.',
+      'Sinergia Negotium supports local and international markets, scaling effortlessly with user growth and portfolio size.',
   },
 ];
 
@@ -133,7 +133,7 @@ export default function FeaturesCarousel() {
           <div className="section-badge">Core Features</div>
           <h2 className="section-title">Everything You Need to Trade with Confidence</h2>
           <p className="section-subtitle">
-            TradePAT combines enterprise-grade security, real-time market access, and AI-driven insights to empower your trading decisions.
+            Sinergia Negotium combines enterprise-grade security, real-time market access, and AI-driven insights to empower your trading decisions.
           </p>
         </div>
         <div className="features-carousel-container">

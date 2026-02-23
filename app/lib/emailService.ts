@@ -295,7 +295,7 @@ class EmailService {
     });
     
     const mailOptions = {
-      from: `"TradePAT" <${fromAddress}>`, // Use name and email format
+      from: `"Sinergia Negotium" <${fromAddress}>`, // Use name and email format
       to: Array.isArray(options.to) ? options.to.join(', ') : options.to,
       subject: options.subject,
       html: options.html,
@@ -306,9 +306,9 @@ class EmailService {
       priority: options.priority || 'normal',
       headers: {
         'X-Priority': options.priority === 'high' ? '1' : options.priority === 'low' ? '5' : '3',
-        'X-Mailer': 'TradePAT Email Service',
+        'X-Mailer': 'Sinergia Negotium Email Service',
         'X-Tags': options.tags?.join(', ') || '',
-        'Message-ID': `<${Date.now()}-${Math.random().toString(36)}@tradepat.com>`,
+        'Message-ID': `<${Date.now()}-${Math.random().toString(36)}@sinergianegotium.com>`,
       },
     };
 
@@ -488,7 +488,7 @@ export async function testEmailConnection() {
 // Get dashboard URL based on environment
 export function getDashboardUrl(): string {
   if (process.env.NODE_ENV === 'production') {
-    return 'https://dashboard.tradepat.com';
+    return 'https://dashboard.sinergianegotium.com';
   }
   return 'http://localhost:3000';
 }

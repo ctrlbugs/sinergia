@@ -1,14 +1,14 @@
 // Email templates for different purposes
 
 export function getSignupEmailTemplate(email: string): string {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || 'https://tradepat.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || 'https://sinergianegotium.com';
   return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Signup Request - TradePAT</title>
+  <title>New Signup Request - Sinergia Negotium</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
   <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;">
@@ -18,9 +18,9 @@ export function getSignupEmailTemplate(email: string): string {
           <!-- Logo Header -->
           <tr>
             <td style="padding: 40px 40px 20px; text-align: center; background: linear-gradient(135deg, #3b30fc 0%, #8b5cf6 100%);">
-              <img src="${baseUrl}/images/securepat-icon.png" alt="TradePAT Logo" style="width: 60px; height: 60px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
+              <img src="${baseUrl}/images/securepat-icon.png" alt="Sinergia Negotium Logo" style="width: 60px; height: 60px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
               <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">New Signup Request</h1>
-              <p style="margin: 12px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 400;">TradePAT Landing Page</p>
+              <p style="margin: 12px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 400;">Sinergia Negotium Landing Page</p>
             </td>
           </tr>
           
@@ -32,7 +32,7 @@ export function getSignupEmailTemplate(email: string): string {
               </p>
               
               <p style="margin: 0 0 24px; color: #333333; font-size: 16px; line-height: 1.6;">
-                You have received a new signup request from the <strong style="color: #3b30fc;">TradePAT</strong> landing page.
+                You have received a new signup request from the <strong style="color: #3b30fc;">Sinergia Negotium</strong> landing page.
               </p>
               
               <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #3b30fc; padding: 24px; margin: 32px 0; border-radius: 8px; box-shadow: 0 2px 8px rgba(59, 48, 252, 0.1);">
@@ -56,13 +56,13 @@ export function getSignupEmailTemplate(email: string): string {
           <tr>
             <td style="padding: 32px 40px; text-align: center; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-top: 1px solid #e0e0e0;">
               <p style="margin: 0 0 8px; color: #666666; font-size: 13px; font-weight: 600;">
-                TradePAT
+                Sinergia Negotium
               </p>
               <p style="margin: 0 0 12px; color: #999999; font-size: 12px; line-height: 1.5;">
                 Protection. Access. Trust.
               </p>
               <p style="margin: 16px 0 0; color: #999999; font-size: 11px; line-height: 1.5;">
-                This is an automated email from <strong style="color: #3b30fc;">TradePAT Landing Page</strong>
+                This is an automated email from <strong style="color: #3b30fc;">Sinergia Negotium Landing Page</strong>
               </p>
             </td>
           </tr>
@@ -76,14 +76,14 @@ export function getSignupEmailTemplate(email: string): string {
 }
 
 export function getNewsletterEmailTemplate(email: string): string {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || 'https://tradepat.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || 'https://sinergianegotium.com';
   return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Newsletter Subscription - TradePAT</title>
+  <title>Newsletter Subscription - Sinergia Negotium</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
   <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;">
@@ -93,9 +93,9 @@ export function getNewsletterEmailTemplate(email: string): string {
           <!-- Logo Header -->
           <tr>
             <td style="padding: 40px 40px 20px; text-align: center; background: linear-gradient(135deg, #3b30fc 0%, #8b5cf6 100%);">
-              <img src="${baseUrl}/images/securepat-icon.png" alt="TradePAT Logo" style="width: 60px; height: 60px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
+              <img src="${baseUrl}/images/securepat-icon.png" alt="Sinergia Negotium Logo" style="width: 60px; height: 60px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
               <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">Newsletter Subscription</h1>
-              <p style="margin: 12px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 400;">TradePAT Landing Page</p>
+              <p style="margin: 12px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 400;">Sinergia Negotium Landing Page</p>
             </td>
           </tr>
           
@@ -107,7 +107,7 @@ export function getNewsletterEmailTemplate(email: string): string {
               </p>
               
               <p style="margin: 0 0 24px; color: #333333; font-size: 16px; line-height: 1.6;">
-                A new user has subscribed to the <strong style="color: #3b30fc;">TradePAT</strong> newsletter.
+                A new user has subscribed to the <strong style="color: #3b30fc;">Sinergia Negotium</strong> newsletter.
               </p>
               
               <div style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #3b30fc; padding: 24px; margin: 32px 0; border-radius: 8px; box-shadow: 0 2px 8px rgba(59, 48, 252, 0.1);">
@@ -131,13 +131,13 @@ export function getNewsletterEmailTemplate(email: string): string {
           <tr>
             <td style="padding: 32px 40px; text-align: center; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-top: 1px solid #e0e0e0;">
               <p style="margin: 0 0 8px; color: #666666; font-size: 13px; font-weight: 600;">
-                TradePAT
+                Sinergia Negotium
               </p>
               <p style="margin: 0 0 12px; color: #999999; font-size: 12px; line-height: 1.5;">
                 Protection. Access. Trust.
               </p>
               <p style="margin: 16px 0 0; color: #999999; font-size: 11px; line-height: 1.5;">
-                This is an automated email from <strong style="color: #3b30fc;">TradePAT Landing Page</strong>
+                This is an automated email from <strong style="color: #3b30fc;">Sinergia Negotium Landing Page</strong>
               </p>
             </td>
           </tr>
@@ -151,14 +151,14 @@ export function getNewsletterEmailTemplate(email: string): string {
 }
 
 export function getOTPEmailTemplate(email: string, otpCode: string): string {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || 'https://tradepat.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || 'https://sinergianegotium.com';
   return `
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Verification Code - TradePAT</title>
+  <title>Your Verification Code - Sinergia Negotium</title>
 </head>
 <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
   <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;">
@@ -168,9 +168,9 @@ export function getOTPEmailTemplate(email: string, otpCode: string): string {
           <!-- Logo Header -->
           <tr>
             <td style="padding: 40px 40px 20px; text-align: center; background: linear-gradient(135deg, #3b30fc 0%, #8b5cf6 100%);">
-              <img src="${baseUrl}/images/securepat-icon.png" alt="TradePAT Logo" style="width: 60px; height: 60px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
+              <img src="${baseUrl}/images/securepat-icon.png" alt="Sinergia Negotium Logo" style="width: 60px; height: 60px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
               <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">Your Verification Code</h1>
-              <p style="margin: 12px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 400;">TradePAT Account Verification</p>
+              <p style="margin: 12px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 400;">Sinergia Negotium Account Verification</p>
             </td>
           </tr>
           
@@ -182,7 +182,7 @@ export function getOTPEmailTemplate(email: string, otpCode: string): string {
               </p>
               
               <p style="margin: 0 0 32px; color: #333333; font-size: 16px; line-height: 1.6;">
-                You have requested a verification code for your <strong style="color: #3b30fc;">TradePAT</strong> account. Use the code below to complete your verification:
+                You have requested a verification code for your <strong style="color: #3b30fc;">Sinergia Negotium</strong> account. Use the code below to complete your verification:
               </p>
               
               <!-- OTP Code Box -->
@@ -215,13 +215,13 @@ export function getOTPEmailTemplate(email: string, otpCode: string): string {
           <tr>
             <td style="padding: 32px 40px; text-align: center; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-top: 1px solid #e0e0e0;">
               <p style="margin: 0 0 8px; color: #666666; font-size: 13px; font-weight: 600;">
-                TradePAT
+                Sinergia Negotium
               </p>
               <p style="margin: 0 0 12px; color: #999999; font-size: 12px; line-height: 1.5;">
                 Protection. Access. Trust.
               </p>
               <p style="margin: 16px 0 0; color: #999999; font-size: 11px; line-height: 1.5;">
-                This email was sent from <strong style="color: #3b30fc;">no-reply@tradepat.com</strong><br/>
+                This email was sent from <strong style="color: #3b30fc;">no-reply@sinergianegotium.com</strong><br/>
                 If you have any questions, please contact our support team.
               </p>
             </td>

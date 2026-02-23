@@ -5,7 +5,7 @@
 ### 1. Button Links Updated
 All buttons now redirect to the correct URLs based on environment:
 - **Local Development**: `http://localhost:3000`
-- **Production**: `https://dashboard.tradepat.com`
+- **Production**: `https://dashboard.sinergianegotium.com`
 
 **Updated Components:**
 - ✅ Navigation (Sign In, Sign Up)
@@ -31,14 +31,14 @@ All buttons now redirect to the correct URLs based on environment:
 
 #### `/api/subscribe` (Updated)
 - Handles both signup and newsletter subscriptions
-- Sends styled emails to `signup@tradepat.com`
+- Sends styled emails to `signup@sinergianegotium.com`
 - Parameters:
   - `email`: User's email address
   - `type`: `'signup'` or `'newsletter'`
 
 #### `/api/send-otp` (New)
 - Sends OTP verification codes
-- Sends from `no-reply@tradepat.com`
+- Sends from `no-reply@sinergianegotium.com`
 - Parameters:
   - `email`: User's email address
   - `otpCode`: 6-digit OTP code
@@ -48,12 +48,12 @@ All buttons now redirect to the correct URLs based on environment:
 #### Hero Section Form
 - ✅ Sends signup emails with `type: 'signup'`
 - ✅ Uses signup email template
-- ✅ Sends to `signup@tradepat.com`
+- ✅ Sends to `signup@sinergianegotium.com`
 
 #### Newsletter Form (CTA Section)
 - ✅ Sends newsletter emails with `type: 'newsletter'`
 - ✅ Uses newsletter email template
-- ✅ Sends to `signup@tradepat.com`
+- ✅ Sends to `signup@sinergianegotium.com`
 
 ## 📧 Email Configuration Required
 
@@ -65,9 +65,9 @@ Create a `.env.local` file in `landing-page-nextjs/` with:
 SMTP_HOST=mail.privateemail.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=signup@tradepat.com
+SMTP_USER=signup@sinergianegotium.com
 SMTP_PASSWORD=your-email-password
-SMTP_FROM=no-reply@tradepat.com
+SMTP_FROM=no-reply@sinergianegotium.com
 NODE_ENV=development
 ```
 
@@ -75,9 +75,9 @@ NODE_ENV=development
 
 1. **SMTP Host**: Usually `mail.privateemail.com`
 2. **SMTP Port**: `465` (SSL) or `587` (TLS)
-3. **SMTP Username**: Your full email address (e.g., `signup@tradepat.com`)
+3. **SMTP Username**: Your full email address (e.g., `signup@sinergianegotium.com`)
 4. **SMTP Password**: Your email account password
-5. **From Address**: Can be `no-reply@tradepat.com` or your main email
+5. **From Address**: Can be `no-reply@sinergianegotium.com` or your main email
 
 ## 📦 Dependencies Added
 

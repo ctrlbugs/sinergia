@@ -12,9 +12,9 @@ To set up email functionality, you'll need the following from your Namecheap Pri
 - **SMTP Security**: `true` for SSL (port 465) or `false` for TLS (port 587)
 
 ### 2. Email Account Credentials
-- **SMTP Username**: Your full email address (e.g., `signup@tradepat.com`)
+- **SMTP Username**: Your full email address (e.g., `signup@sinergianegotium.com`)
 - **SMTP Password**: Your email account password
-- **From Address**: Can be `no-reply@tradepat.com` or your main email
+- **From Address**: Can be `no-reply@sinergianegotium.com` or your main email
 
 ## How to Get Your Namecheap SMTP Settings
 
@@ -23,7 +23,7 @@ To set up email functionality, you'll need the following from your Namecheap Pri
    - Log in to your account
 
 2. **Access Email Settings**
-   - Navigate to "Domain List" → Select your domain (`tradepat.com`)
+   - Navigate to "Domain List" → Select your domain (`sinergianegotium.com`)
    - Click on "Manage" next to "Private Email"
    - Or go directly to: https://privateemail.com/
 
@@ -46,9 +46,9 @@ To set up email functionality, you'll need the following from your Namecheap Pri
 SMTP_HOST=mail.privateemail.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=signup@tradepat.com
+SMTP_USER=signup@sinergianegotium.com
 SMTP_PASSWORD=your-actual-password-here
-SMTP_FROM=no-reply@tradepat.com
+SMTP_FROM=no-reply@sinergianegotium.com
 NODE_ENV=development
 ```
 
@@ -58,9 +58,9 @@ NODE_ENV=development
 SMTP_HOST=mail.privateemail.com
 SMTP_PORT=465
 SMTP_SECURE=true
-SMTP_USER=signup@tradepat.com
+SMTP_USER=signup@sinergianegotium.com
 SMTP_PASSWORD=your-actual-password-here
-SMTP_FROM=no-reply@tradepat.com
+SMTP_FROM=no-reply@sinergianegotium.com
 NODE_ENV=production
 ```
 
@@ -68,18 +68,18 @@ NODE_ENV=production
 
 ### 1. Signup Emails
 - **From**: Hero section input field
-- **To**: `signup@tradepat.com`
+- **To**: `signup@sinergianegotium.com`
 - **Template**: Signup email template (purple gradient header)
 - **API**: `/api/subscribe` with `type: 'signup'`
 
 ### 2. Newsletter Emails
 - **From**: Newsletter input field (CTA section)
-- **To**: `signup@tradepat.com`
+- **To**: `signup@sinergianegotium.com`
 - **Template**: Newsletter email template (dark header)
 - **API**: `/api/subscribe` with `type: 'newsletter'`
 
 ### 3. OTP Emails
-- **From**: `no-reply@tradepat.com`
+- **From**: `no-reply@sinergianegotium.com`
 - **To**: User's email address
 - **Template**: OTP verification template (with code display)
 - **API**: `/api/send-otp` with `email` and `otpCode`
