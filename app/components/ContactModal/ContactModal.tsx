@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, ReactNode, useCallback, useEffect } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useCallback, useEffect, useRef } from 'react';
 
 interface ContactModalContextType {
   isOpen: boolean;
@@ -33,10 +33,14 @@ export function ContactModalProvider({ children }: { children: ReactNode }) {
 }
 
 function ContactModalContent({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [toast, setToast] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+
   useEffect(() => {
     if (!isOpen) return;
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === 'Escape' && !isSubmitting) onClose();
     };
     document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', handleEscape);
@@ -44,16 +48,60 @@ function ContactModalContent({ isOpen, onClose }: { isOpen: boolean; onClose: ()
       document.body.style.overflow = '';
       document.removeEventListener('keydown', handleEscape);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, isSubmitting]);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // TODO: Connect to API
-    onClose();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      orgName: formData.get('orgName') || '',
+      industrySector: formData.get('industrySector') || '',
+      orgType: formData.get('orgType') || '',
+      country: formData.get('country') || '',
+      fullName: formData.get('fullName') || '',
+      jobTitle: formData.get('jobTitle') || '',
+      email: formData.get('email') || '',
+      phone: formData.get('phone') || '',
+      contactMethod: formData.get('contactMethod') || 'email',
+      procurementCategory: formData.get('procurementCategory') || '',
+      description: formData.get('description') || '',
+      supportType: formData.get('supportType') || '',
+    };
+
+    setIsSubmitting(true);
+    setToast(null);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setToast({ type: 'error', message: data.message || data.error || 'Failed to submit. Please try again.' });
+        return;
+      }
+
+      setToast({ type: 'success', message: data.message || 'Your request has been submitted successfully.' });
+      form.reset();
+      setTimeout(() => {
+        onClose();
+        setToast(null);
+      }, 2500);
+    } catch {
+      setToast({ type: 'error', message: 'Failed to submit. Please try again later.' });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleBackdropClick = (e: React.MouseEvent) => {
-    if (e.target === e.currentTarget) onClose();
+    if (e.target === e.currentTarget && !isSubmitting) onClose();
   };
 
   if (!isOpen) return null;
@@ -66,10 +114,10 @@ function ContactModalContent({ isOpen, onClose }: { isOpen: boolean; onClose: ()
         </button>
 
         <div className="contact-modal-header">
-          <h2 id="contact-modal-title">📩 Engage Our Procurement Advisory Team</h2>
+          <h2 id="contact-modal-title">Engage Our Procurement Advisory Team</h2>
         </div>
 
-        <form className="contact-modal-form" onSubmit={handleSubmit}>
+        <form ref={formRef} className="contact-modal-form" onSubmit={handleSubmit}>
           {/* Section 1: Organization Information */}
           <fieldset className="contact-modal-section">
             <legend>Organization Information</legend>
@@ -180,8 +228,14 @@ function ContactModalContent({ isOpen, onClose }: { isOpen: boolean; onClose: ()
           </fieldset>
 
           <div className="contact-modal-actions">
-            <button type="submit" className="btn btn-primary contact-modal-submit">
-              Request Procurement Consultation
+            {toast && (
+              <div className={`contact-modal-toast contact-modal-toast-${toast.type}`}>
+                <span className="contact-modal-toast-icon">{toast.type === 'success' ? '✓' : '!'}</span>
+                <span>{toast.message}</span>
+              </div>
+            )}
+            <button type="submit" className="btn btn-primary contact-modal-submit" disabled={isSubmitting}>
+              {isSubmitting ? 'Submitting...' : 'Request Procurement Consultation'}
             </button>
             <p className="contact-modal-subtext">
               Our team will review your submission and respond within 24–48 business hours.

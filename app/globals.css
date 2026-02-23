@@ -6466,6 +6466,48 @@ html {
     line-height: 1.5;
 }
 
+.contact-modal-toast {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.contact-modal-toast-success {
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #065f46;
+}
+
+.contact-modal-toast-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    color: #b91c1c;
+}
+
+.contact-modal-toast-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.contact-modal-toast-success .contact-modal-toast-icon {
+    background: rgba(16, 185, 129, 0.2);
+}
+
+.contact-modal-toast-error .contact-modal-toast-icon {
+    background: rgba(239, 68, 68, 0.2);
+}
+
 @media (max-width: 640px) {
     .contact-modal-overlay {
         padding: 0.5rem;

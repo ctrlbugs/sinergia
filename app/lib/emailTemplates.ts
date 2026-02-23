@@ -150,6 +150,91 @@ export function getNewsletterEmailTemplate(email: string): string {
   `;
 }
 
+export interface ContactFormData {
+  orgName: string;
+  industrySector: string;
+  orgType: string;
+  country: string;
+  fullName: string;
+  jobTitle: string;
+  email: string;
+  phone: string;
+  contactMethod: string;
+  procurementCategory: string;
+  description: string;
+  supportType: string;
+}
+
+export function getContactEmailTemplate(data: ContactFormData): string {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || 'https://sinergianegotium.com';
+  const formatLabel = (val: string) => val ? val.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase()) : '—';
+  return `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Procurement Consultation Request - Sinergia Negotium</title>
+</head>
+<body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
+  <table role="presentation" style="width: 100%; border-collapse: collapse; background-color: #f5f5f5;">
+    <tr>
+      <td align="center" style="padding: 40px 20px;">
+        <table role="presentation" style="max-width: 600px; width: 100%; border-collapse: collapse; background-color: #ffffff; border-radius: 16px; box-shadow: 0 8px 24px rgba(59, 48, 252, 0.15); overflow: hidden;">
+          <tr>
+            <td style="padding: 40px 40px 20px; text-align: center; background: linear-gradient(135deg, #0500FF 0%, #3b82f6 100%);">
+              <img src="${baseUrl}/images/securepat-icon.png" alt="Sinergia Negotium Logo" style="width: 60px; height: 60px; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;" />
+              <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: 700; letter-spacing: -0.5px;">Procurement Consultation Request</h1>
+              <p style="margin: 12px 0 0; color: rgba(255, 255, 255, 0.9); font-size: 14px; font-weight: 400;">Sinergia Negotium Contact Form</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 40px;">
+              <p style="margin: 0 0 24px; color: #333333; font-size: 16px; line-height: 1.6;">
+                A new procurement consultation request has been submitted through the contact form.
+              </p>
+              <table role="presentation" style="width: 100%; border-collapse: collapse; font-size: 14px;">
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Organization</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${data.orgName || '—'}</td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Industry Sector</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${formatLabel(data.industrySector)}</td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Organization Type</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${formatLabel(data.orgType)}</td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Country / Region</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${data.country || '—'}</td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Full Name</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${data.fullName || '—'}</td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Job Title</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${data.jobTitle || '—'}</td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Email</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="mailto:${data.email}" style="color: #0500FF;">${data.email}</a></td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Phone</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${data.phone || '—'}</td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Preferred Contact</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${formatLabel(data.contactMethod)}</td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Procurement Category</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${formatLabel(data.procurementCategory)}</td></tr>
+                <tr><td style="padding: 8px 0; border-bottom: 1px solid #eee; color: #666; font-weight: 600;">Support Type</td><td style="padding: 8px 0; border-bottom: 1px solid #eee;">${formatLabel(data.supportType)}</td></tr>
+              </table>
+              ${data.description ? `
+              <div style="margin-top: 24px; padding: 16px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #0500FF;">
+                <p style="margin: 0 0 8px; color: #666; font-size: 12px; font-weight: 600;">Description</p>
+                <p style="margin: 0; color: #333; font-size: 14px; line-height: 1.6; white-space: pre-wrap;">${data.description}</p>
+              </div>
+              ` : ''}
+              <div style="margin-top: 24px; background-color: #d1fae5; border-left: 4px solid #10b981; padding: 16px 20px; border-radius: 8px;">
+                <p style="margin: 0; color: #065f46; font-size: 14px; line-height: 1.6;">
+                  <strong>✅ Action Required:</strong> Please respond to this consultation request within 24–48 business hours.
+                </p>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 32px 40px; text-align: center; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-top: 1px solid #e0e0e0;">
+              <p style="margin: 0 0 8px; color: #666666; font-size: 13px; font-weight: 600;">Sinergia Negotium</p>
+              <p style="margin: 0 0 12px; color: #999999; font-size: 12px;">Protection. Access. Trust.</p>
+              <p style="margin: 16px 0 0; color: #999999; font-size: 11px;">Automated email from Sinergia Negotium Landing Page</p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
+  `;
+}
+
 export function getOTPEmailTemplate(email: string, otpCode: string): string {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || process.env.BASE_URL || 'https://sinergianegotium.com';
   return `

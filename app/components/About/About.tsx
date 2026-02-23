@@ -27,7 +27,7 @@ export default function About() {
           
           <div className="about-content-right">
             <div className="about-highlight-box">
-              <p>Our approach strengthens governance frameworks, streamline complex procurement processes, and deliver transparent, compliant solutions for oil & gas, government, and private sector organizations.</p>
+              <p>We deliver streamlined, compliant procurement solutions that enhance governance, reduce administrative bottlenecks, and boost accountability for oil & gas, government, and private sector organizations.</p>
             </div>
             
             <div className="about-features-grid">

@@ -2,11 +2,12 @@
 
 import { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
-import { handleSignUp } from '@/app/config/constants';
 import { useLanguage } from '@/app/contexts/LanguageContext';
+import { useContactModal } from '@/app/components/ContactModal/ContactModal';
 
 export default function Hero() {
   const { t, language } = useLanguage();
+  const { openModal: openContactModal } = useContactModal();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentBadgeIndex, setCurrentBadgeIndex] = useState(0);
   const heroSectionRef = useRef<HTMLElement>(null);
@@ -166,7 +167,7 @@ export default function Hero() {
               className="btn btn-primary"
               onClick={(e) => {
                 e.preventDefault();
-                handleSignUp();
+                openContactModal();
               }}
             >
               {t('hero.cta')}
